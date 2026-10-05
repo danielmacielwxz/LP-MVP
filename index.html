@@ -143,6 +143,5 @@ f.addEventListener('submit',e=>{e.preventDefault();
  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){err.textContent='Informe um e-mail válido.';f.email.focus();return}
  if(!t){err.textContent='Selecione o tipo de operação.';f.tipo.focus();return}
  err.textContent='';
- // TODO: enviar {n,m,t} para seu backend/formulário (Formspree, Google Forms, API própria)
  f.hidden=true;ok.hidden=false;ok.textContent='Obrigado, '+n+'! Entraremos em contato em '+m+' para combinar o piloto.';});
 </script></body></html>
