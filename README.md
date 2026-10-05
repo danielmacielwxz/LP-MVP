@@ -1,4 +1,3 @@
-# LP-MVP
 <div align="center">
 
 # 🍽️ SmartBuffet
@@ -15,7 +14,7 @@
 
 ## 🚀 O que é o SmartBuffet?
 
-O **SmartBuffet** é um MVP criado para ajudar cozinhas e buffets a decidirem **quanto produzir durante a operação**.
+O **SmartBuffet** é um sistema criado para ajudar cozinhas e buffets a decidirem **quanto produzir durante a operação**.
 
 Em vez de depender apenas da experiência ou do *feeling* da equipe, o sistema utiliza o **fluxo de entrada e saída de clientes** para indicar se a cozinha deve:
 
@@ -75,22 +74,14 @@ O SmartBuffet transforma o **movimento de clientes** em uma orientação simples
 🍳 Envia um comando para a cozinha
 ```
 
-A cozinha não precisa interpretar gráficos complexos.
-
-Ela recebe uma orientação direta:
+A cozinha recebe uma orientação direta:
 
 ```text
-┌──────────────────────────┐
-│   🟢 AUMENTAR PRODUÇÃO   │
-└──────────────────────────┘
+🟢 AUMENTAR PRODUÇÃO
 
-┌──────────────────────────┐
-│    🟡 MANTER RITMO      │
-└──────────────────────────┘
+🟡 MANTER RITMO
 
-┌──────────────────────────┐
-│   🔴 DIMINUIR PRODUÇÃO   │
-└──────────────────────────┘
+🔴 DIMINUIR PRODUÇÃO
 ```
 
 ---
@@ -106,7 +97,7 @@ A recepção registra:
 
 O SmartBuffet calcula o **saldo do fluxo dos últimos 15 minutos** e combina essa informação com o horário de funcionamento.
 
-### Exemplo do MVP
+### Exemplo
 
 | Saldo recente | Recomendação |
 |---|---|
@@ -114,11 +105,9 @@ O SmartBuffet calcula o **saldo do fluxo dos últimos 15 minutos** e combina ess
 | Entre `-5` e `+5` | 🟡 **Manter ritmo** |
 | Abaixo de `-5` | 🔴 **Diminuir produção** |
 
-Além disso, o sistema considera diferentes períodos da operação, como:
+Além disso, o sistema considera diferentes períodos da operação:
 
 **Pico • Normal • Baixa**
-
-Em períodos de baixa, a proposta é reduzir o ritmo de produção.
 
 ---
 
@@ -126,7 +115,7 @@ Em períodos de baixa, a proposta é reduzir o ritmo de produção.
 
 ## 👥 1. Tela da Recepção
 
-A recepção registra o movimento dos clientes.
+Responsável pelo controle do movimento dos clientes.
 
 ### Principais funções
 
@@ -135,13 +124,13 @@ A recepção registra o movimento dos clientes.
 ✅ Visualizar o saldo recente  
 ✅ Acompanhar métricas dos últimos 15 minutos  
 ✅ Configurar horários de pico e baixa  
-✅ Configurar diferentes dias da semana
+✅ Configurar diferentes dias da semana  
 
 ---
 
 ## 👨‍🍳 2. Tela da Cozinha
 
-A equipe da cozinha recebe a decisão do sistema de forma clara e fácil de enxergar.
+A equipe recebe a decisão do sistema de forma clara e fácil de visualizar.
 
 ### A tela mostra
 
@@ -153,7 +142,7 @@ A equipe da cozinha recebe a decisão do sistema de forma clara e fácil de enxe
 
 🔔 **Aviso quando o comando muda**
 
-A proposta é permitir que a equipe veja rapidamente o que precisa ser feito, inclusive à distância.
+A ideia é que a equipe consiga entender rapidamente o que precisa fazer.
 
 ---
 
@@ -161,25 +150,29 @@ A proposta é permitir que a equipe veja rapidamente o que precisa ser feito, in
 
 O SmartBuffet busca agir **antes que o desperdício aconteça**.
 
-Enquanto outras abordagens podem analisar ou lidar com a sobra depois da produção, o SmartBuffet utiliza o fluxo de pessoas para tentar evitar que o excesso seja produzido.
-
-### SmartBuffet
-
-> **Prevenção durante a operação.**
+Em vez de apenas analisar a sobra depois da produção, o sistema utiliza o fluxo de pessoas para ajudar a evitar que o excesso seja produzido.
 
 ```text
-Outras abordagens
+MODELO TRADICIONAL
 
-Produção → Excesso → Sobra → Análise
-                         ↑
-                    problema já ocorreu
+Produção
+   ↓
+Excesso
+   ↓
+Sobra
+   ↓
+Análise do desperdício
 
 
-SmartBuffet
+SMARTBUFFET
 
-Fluxo → Análise → Ajuste → Produção
-                 ↑
-          prevenção do excesso
+Fluxo de clientes
+       ↓
+Análise
+       ↓
+Ajuste da produção
+       ↓
+Produção necessária
 ```
 
 ---
@@ -191,35 +184,33 @@ Fluxo → Análise → Ajuste → Produção
 | ⚡ Atua durante a operação | ✅ |
 | 👥 Usa fluxo de clientes | ✅ |
 | ⏱️ Analisa os últimos 15 minutos | ✅ |
-| 📱 Pode ser usado em celular/tablet/monitor | ✅ |
+| 📱 Funciona em celular, tablet ou monitor | ✅ |
 | 🍳 Envia instruções para a cozinha | ✅ |
 | 📊 Produção baseada em dados | ✅ |
 | 🗑️ Busca evitar superprodução | ✅ |
-| 🏢 Suporte conceitual a várias unidades | ✅ |
+| 🏢 Pode atender múltiplas unidades | ✅ |
 
 ---
 
 # 📈 Impacto esperado
 
-O SmartBuffet busca gerar três resultados principais:
-
 ### 🗑️ Menos sobra
 
-Produzir de acordo com o movimento real pode ajudar a diminuir alimentos produzidos sem necessidade.
+Ajustar a produção de acordo com o movimento pode ajudar a diminuir alimentos preparados sem necessidade.
 
 ### 💰 Menos recursos desperdiçados
 
-Menos superprodução significa reduzir o uso desnecessário de matéria-prima, água, energia e mão de obra.
+Menos superprodução significa menor desperdício de matéria-prima, água, energia e mão de obra.
 
 ### 😊 Melhor experiência
 
-Ao identificar crescimento no fluxo de clientes, a cozinha pode acelerar antes que os pratos fiquem vazios.
+Ao identificar um aumento no fluxo, a cozinha pode acelerar a produção antes que os pratos fiquem vazios.
 
 ---
 
-# 🏢 Pensado para diferentes operações
+# 🏢 Onde pode ser utilizado?
 
-A Landing Page apresenta o MVP para operações como:
+O SmartBuffet foi pensado para:
 
 - 🍽️ **Buffets**
 - 🍴 **Restaurantes**
@@ -231,7 +222,7 @@ A Landing Page apresenta o MVP para operações como:
 
 # 🌐 Múltiplas unidades
 
-O conceito do SmartBuffet também considera redes com mais de uma filial.
+O SmartBuffet também pode atender estabelecimentos com mais de uma filial.
 
 ```text
 SmartBuffet
@@ -246,62 +237,53 @@ SmartBuffet
     └── Dados e histórico próprios
 ```
 
-Cada unidade pode trabalhar com seu próprio canal e histórico sem interferir nas demais.
+Cada unidade pode trabalhar com seus próprios dados sem interferir nas demais.
 
 ---
 
 # 🛠️ Tecnologias utilizadas
 
-A Landing Page do MVP foi desenvolvida utilizando tecnologias web simples:
+A Landing Page foi desenvolvida utilizando:
 
-<p>
-  <strong>HTML5</strong> •
-  <strong>CSS3</strong> •
-  <strong>JavaScript</strong>
-</p>
-
-Também utiliza:
-
-- **Google Fonts**
+- 🌐 **HTML5**
+- 🎨 **CSS3**
+- ⚙️ **JavaScript**
+- 🔤 **Google Fonts**
 - **Barlow**
 - **Barlow Condensed**
 
-A demonstração funciona diretamente no navegador.
+O projeto funciona diretamente pelo navegador.
 
 ---
 
 # 📱 Responsividade
 
-A Landing Page possui adaptação para telas menores.
+A interface se adapta a diferentes tamanhos de tela.
 
-Pode ser visualizada em:
+Pode ser utilizada em:
 
 💻 Desktop  
 💻 Notebook  
 📱 Smartphone  
 📲 Tablet  
 
-Em telas menores, os conteúdos organizados em colunas passam a ser exibidos verticalmente.
-
 ---
 
 # ♿ Acessibilidade
 
-O código também possui cuidados básicos com acessibilidade, incluindo:
+O código também possui recursos como:
 
 - `aria-live`;
 - `aria-selected`;
 - `role="status"`;
 - `role="tabpanel"`;
-- destaque visual ao navegar pelo teclado;
-- suporte a `prefers-reduced-motion`;
-- textos alternativos nas imagens.
+- foco visível para navegação pelo teclado;
+- `prefers-reduced-motion`;
+- textos alternativos em imagens.
 
 ---
 
-# 📂 Estrutura atual
-
-A Landing Page está concentrada principalmente em um único arquivo:
+# 📂 Estrutura do projeto
 
 ```text
 📦 SmartBuffet
@@ -324,7 +306,7 @@ HTML
 
 # ▶️ Como executar
 
-Não é necessário instalar bibliotecas ou dependências.
+O projeto não precisa de instalação de bibliotecas ou dependências.
 
 ### 1. Baixe o projeto
 
@@ -338,24 +320,108 @@ git clone URL-DO-REPOSITORIO
 cd SmartBuffet
 ```
 
-### 3. Abra
+### 3. Abra o arquivo
 
 ```text
 SmartBuffet — Landing page do MVP.html
 ```
 
-no navegador.
+Depois, basta abrir no navegador.
 
-Você também pode utilizar o **Live Server** no VS Code.
+Também é possível utilizar o **Live Server** no VS Code.
 
 ---
 
-# 🧪 MVP
+# 🧪 Funcionamento do sistema
 
-O objetivo desta versão é demonstrar o funcionamento principal da ideia:
+O funcionamento principal do SmartBuffet pode ser resumido em cinco etapas:
 
-```mermaid
-flowchart TD
-    A[👤 Entrada e saída de clientes]
-    B[📊 Fluxo dos últimos 15 minutos]
-    C[🕒
+### 1️⃣ Entrada e saída
+
+A recepção registra quando uma pessoa entra ou sai.
+
+### 2️⃣ Análise do fluxo
+
+O sistema verifica o saldo de clientes dos últimos **15 minutos**.
+
+### 3️⃣ Análise do horário
+
+O SmartBuffet considera se o estabelecimento está em um período de:
+
+- 🟢 Pico
+- 🟡 Normal
+- 🔴 Baixa
+
+### 4️⃣ Decisão
+
+Com essas informações, o sistema define uma recomendação.
+
+| Situação | Comando |
+|---|---|
+| Movimento aumentando | 🟢 **AUMENTAR PRODUÇÃO** |
+| Movimento estável | 🟡 **MANTER RITMO** |
+| Movimento diminuindo | 🔴 **DIMINUIR PRODUÇÃO** |
+
+### 5️⃣ Informação para a cozinha
+
+A recomendação aparece diretamente na tela utilizada pela equipe da cozinha.
+
+```text
+👥 FLUXO DE CLIENTES
+        ↓
+📊 ANÁLISE DOS DADOS
+        ↓
+🧠 DECISÃO
+        ↓
+👨‍🍳 COZINHA
+        ↓
+🍲 PRODUÇÃO AJUSTADA
+```
+
+---
+
+# 🔮 Possíveis evoluções
+
+Futuramente, o projeto pode receber recursos como:
+
+- 📊 dashboard administrativo;
+- 💾 banco de dados;
+- 📈 histórico de fluxo;
+- 📉 relatórios de desperdício;
+- 🔐 login e autenticação;
+- 🏢 gerenciamento de unidades;
+- 🔔 sistema de notificações;
+- 📅 análise de horários e dias;
+- 🤖 algoritmos de recomendação mais avançados.
+
+---
+
+# 🎯 Resumo
+
+<div align="center">
+
+### 👥 Fluxo de pessoas
+
+⬇️
+
+### 📊 Informação em tempo real
+
+⬇️
+
+### 🧠 Decisão
+
+⬇️
+
+### 👨‍🍳 Orientação para a cozinha
+
+⬇️
+
+## 🍲 Produza só o necessário.
+
+---
+
+**SmartBuffet © 2026**
+
+*Tecnologia para produção sob demanda em cozinhas e buffets.*
+
+</div>
