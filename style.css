@@ -1,9 +1,3 @@
-/* =========================================================
-   SmartBuffet — Landing Page
-   CSS criado especialmente para a LP do MVP
-   ========================================================= */
-
-/* ---------- Variáveis ---------- */
 :root {
   --bg: #06172b;
   --bg-soft: #0b2442;
@@ -27,7 +21,6 @@
   box-sizing: border-box;
 }
 
-/* ---------- Reset ---------- */
 *,
 *::before,
 *::after {
