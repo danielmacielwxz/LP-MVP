@@ -6,7 +6,7 @@
 
 **Tecnologia para produção sob demanda em buffets, restaurantes e cozinhas.**
 
-📊 Fluxo em tempo real • 🍲 Menos desperdício • ⚡ Decisões rápidas
+📊 Fluxo em tempo real • 🍲 Menos desperdício • ⚡ Decisões rápidas 
 
 </div>
 
